@@ -11,6 +11,15 @@ RUN DEBIAN_FRONTEND=noninteractive \
   cron && \
   apt-get clean
 
+# Some scraper utilities
+RUN python3 -m pip install beautifulsoup4 \ 
+                           email \
+                           base64 \
+                           lxml \
+                           requests \
+                           time \
+                           imaplib \
+                           random             
 COPY selenium_setup.sh .
 RUN bash selenium_setup.sh
 
