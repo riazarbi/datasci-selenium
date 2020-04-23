@@ -13,6 +13,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
 
 # Some scraper utilities
 RUN python3 -m pip install beautifulsoup4 \ 
+                           io \
                            email \
                            base64 \
                            lxml \
