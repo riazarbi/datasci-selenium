@@ -13,12 +13,7 @@ RUN DEBIAN_FRONTEND=noninteractive \
 
 # Some scraper utilities
 RUN python3 -m pip install beautifulsoup4 \ 
-                           base64 \
-                           lxml \
-                           requests \
-                           time \
-                           imaplib \
-                           random             
+                           lxml         
 COPY selenium_setup.sh .
 RUN bash selenium_setup.sh
 
