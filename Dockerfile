@@ -13,7 +13,8 @@ RUN DEBIAN_FRONTEND=noninteractive \
 
 # Some scraper utilities
 RUN python3 -m pip install beautifulsoup4 \ 
-                           lxml         
+                           lxml     \
+                           pyvirtualdisplay
 COPY selenium_setup.sh .
 RUN bash selenium_setup.sh
 
