@@ -16,7 +16,10 @@ RUN python3 -m pip install beautifulsoup4 \
                            lxml     \
                            pyvirtualdisplay \
                            selenium \
-                           pandas
+                           pandas \
+ && python3 -m pip install -U setuptools \
+ && python3 -m pip install pywikibot
+                           
 COPY selenium_setup.sh .
 RUN bash selenium_setup.sh
 
